@@ -1,14 +1,22 @@
-//
-//  main.cpp
-//  FibonocciSequence
-//
-//  Created by Matt Ahmad on 2022-10-13.
-//
-
 #include <iostream>
+using namespace std;
+void fib(int n){
+    int f[n];
+    int i;
+    f[0] = 0;
+    f[1] = 1;
+    for (i = 2; i < n; i++) {
+        f[i] = f[i-1] + f[i-2];
+    }
+    for (i = 0; i < n; i++) {
+        cout<<f[i]<<" ";
+    }
+}
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    
+    int n = 10;
+    fib(n);
+    getchar();
     return 0;
 }
